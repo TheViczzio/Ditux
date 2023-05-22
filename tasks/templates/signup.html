@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container py-5">
+    <section class="card" id="card" style="width: auto;">
+    <div class="card-body">
+    <strong><p class="display-1 text-center">CREAR CUENTA</strong></p>
+
+{{error}}
+<form action="/signup/" method="POST" class="text-center"></form>
+<form method="POST">
+   {% csrf_token %}
+   
+    {{form.as_p}}
+
+    <button>
+        Iniciar
+    </button>
+</form>
+</section>
+</main>
+{% endblock %}
+

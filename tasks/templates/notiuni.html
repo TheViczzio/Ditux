@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container py-5">
+    <section class="card" id="card" style="width: auto;">
+    <div class="card-body">
+<h1>Noticias Universales</h1>
+
+<ul>
+    {% for notiuni in notiunis %}
+    <li>
+
+        <a href="{% url 'notiuni_detail' notiuni.id %}">
+            
+            
+        <strong><h1>{{notiuni.title}}</strong></h1>
+        
+        
+        </a>
+
+    
+    </li>
+    {% endfor %}
+</ul>
+</section>
+</main>
+{% endblock %}

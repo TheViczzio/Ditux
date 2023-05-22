@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container py-5">
+    <section class="card" id="card" style="width: auto;">
+    <div class="card-body">
+<h1>Parroquias</h1>
+
+<ul>
+    {% for parro in parros %}
+    <li>
+
+        <a href="{% url 'parro_detail' parro.id %}">
+            
+            {% if parro.important %}
+        <strong><h1>{{parro.title}}</strong></h1>
+        {% else %}
+        <h1>{{parro.title}}</h1>
+        {% endif %}
+        
+        </a>
+
+    
+    </li>
+    {% endfor %}
+</ul>
+</section>
+</main>
+{% endblock %}

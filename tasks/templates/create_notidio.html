@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{{error}}
+<div>
+    <main class="container py-5">
+        <section class="card" id="card" style="width: auto;">
+        <div class="card-body">
+            <strong><h1>Añadir Noticia Diocesana</strong></h1>
+<form action="/notidio/create/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit">
+        Guardar
+    </button>
+    
+</form>
+</section>
+</main>
+</div>
+
+
+<div>
+    <main class="container py-5">
+        <section class="card" id="card" style="width: auto;">
+        <div class="card-body">
+            <strong><h1>Añadir Noticia Universal</strong></h1>
+    <form action="/notiuni/create/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    
+        {{form2.as_p}}
+    
+        <button type="submit">
+            Guardar
+        </button>
+        
+    </form>
+</section>
+</main>
+</div>
+{% endblock %}

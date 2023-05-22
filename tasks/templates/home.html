@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section>
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center ">
+      
+      <div class="col-4 col-sm-6 col-md-4 col-lg-3 mt-2">
+        <div class="card  text-white bg-info" style="width: 18rem">
+          <img src="{% static 'images/evangelio.png' %}" class="card-img-top" width="80" height="200" alt="logo" />
+          <div class="card-body">
+            <div class="card-header"><h5>Evangelio Dominical</h5></div>
+            <a href="/evans" class="btn btn-primary">abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-6 col-md-4 col-lg-3 mt-2">
+    <div class="card text-white bg-info" style="width: 18rem">
+      <img src="{% static 'images/diocesanas.png' %}" class="card-img-top" width="80" height="200" alt="logo" />
+      <div class="card-body">
+        <div class="card-header"><h5>Noticias Diocesanas</h5></div>
+        
+        <a href="/notidios" class="btn btn-primary">abrir</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4 col-sm-6 col-md-4 col-lg-3 mt-2">
+    <div class="card text-white bg-info" style="width: 18rem">
+      <img src="{% static 'images/universales.png' %}" class="card-img-top" width="80" height="200" alt="logo" />
+      <div class="card-body">
+        <div class="card-header"><h5>Noticias Universales</h5></div>
+        
+        <a href="/notiunis" class="btn btn-primary">abrir</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4 col-sm-6 col-md-4 col-lg-3 mt-2">
+    <div class="card text-white bg-info" style="width: 18rem">
+      <img src="{% static 'images/subsidios.png' %}" class="card-img-top" width="80" height="200" alt="logo" />
+      <div class="card-body">
+        <div class="card-header"><h5>Subsidios</h5></div>
+        <a href="/notisubs" class="btn btn-primary">abrir</a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+</section>
+{% endblock %}

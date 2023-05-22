@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container py-5">
+    <section class="card" id="card" style="width: auto;">
+    <div class="card-body">
+<strong><h1>Añadir Decanato</strong></h1>
+{{error}}
+<br>
+<form action="/tasks/create/" method="POST" enctype="multipart/form-data">
+   
+   
+   
+   
+   
+   
+    {% csrf_token %}
+    {% for field in form.visible_fields %}
+    <div class="form-group">
+        <label for="email">{{ field.label }}:</label>
+        {{ field }}
+      </div>
+    {% endfor %}
+   
+
+    <button type="submit">
+        Guardar
+    </button>
+    
+</form>
+
+</section>
+</main>
+
+{% endblock %}

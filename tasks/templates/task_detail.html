@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container py-5">
+    <section class="card" id="card" style="width: auto;">
+    <div class="card-body">
+<strong><h1>{{task.title}}</strong></h1>
+{% if task.imagen %}
+<img src="{{task.imagen.url}}" alt="imagen" width="300">
+{% endif %}
+<p><strong>Nombre del Decano:</strong> {{task.nombreDecanato}}</p>
+<div>
+<p><strong>Parroquia que lo Conforma:</strong> {{task.parroquia}} </p>
+<p><strong>Ciudades que lo conforman:</strong> {{task.ciudad}}</p>
+</div>
+</section>
+</main>
+{% endblock %}
